@@ -14,8 +14,6 @@ const App: React.FC = () => {
 
   const total = items.length;
 
-  const totalPages = Math.ceil(total / perPage);
-
   const startIndex = (currentPage - 1) * perPage;
   const endIndex = startIndex + perPage;
 
@@ -52,7 +50,9 @@ const App: React.FC = () => {
           </select>
         </div>
 
-        <label className="col-form-label col">items per page</label>
+        <label htmlFor="perPageSelector" className="col-form-label col">
+          items per page
+        </label>
       </div>
 
       <Pagination
