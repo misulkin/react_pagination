@@ -3,14 +3,14 @@ import React from 'react';
 type Props = {
   total: number;
   perPage: number;
-  currentPage: number;
+  currentPage?: number;
   onPageChange: (page: number) => void;
 };
 
 const Pagination: React.FC<Props> = ({
   total,
   perPage,
-  currentPage,
+  currentPage = 1,
   onPageChange,
 }) => {
   const totalPages = Math.ceil(total / perPage);
